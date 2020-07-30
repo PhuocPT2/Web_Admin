@@ -1,0 +1,135 @@
+@import '../../assets/styles/colors.scss';
+// Font Family
+$body-font: 'Roboto';
+
+// Font Weights
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semibold: 500;
+$bold: 700;
+$ultra: 800;
+
+// Base Font
+$base-font-family: $body-font, sans-serif;
+$base-font-size: 14px;
+$base-font-weight: $regular;
+$base-line-height: 1.6em;
+
+// Colors
+$black: #000000;
+$dark-gray: rgba($black, 0.8);
+$gray: rgba($black, 0.6);
+$light-gray: rgba($black, 0.4);
+$lighter-gray: rgba($black, 0.2);
+$white: #ffffff;
+$accent: #4285f4;
+
+// Form Settings
+$max-width: 600px;
+$max-height: 400px;
+$gutters: 24px;
+
+.form-bank {
+  z-index: 15;
+  position: relative;
+  background-color: $white;
+  width: $max-width;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 30px;
+
+  &-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .bank-label {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: $gray;
+      font-size: 12px;
+      font-weight: $semibold;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .bank-input {
+      outline: none;
+      display: block;
+      background: rgba($black, 0.1);
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      color: $gray;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+      transition: 0.3s ease;
+      &__feedback {
+        color: red;
+      }
+      &:focus {
+        color: $dark-gray;
+      }
+
+      .two & {
+        color: $white;
+
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+
+    .bank-button {
+      outline: none;
+      background: $accent;
+      width: 40%;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 20px;
+      color: $white;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &__group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      &__cancel {
+        background-color: $light-gray;
+      }
+    }
+  }
+}
+
+.bank-loan__tittle {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: $purple;
+  font-size: 1rem;
+  font-weight: $bold;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
