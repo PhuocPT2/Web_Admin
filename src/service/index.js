@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 
-const baseUrl = 'http://swd39120201112142226.azurewebsites.net/api/';
+const baseUrl = 'https://swd39120201112142226.azurewebsites.net/api/';
 
 const setHeader = (token) => {
   return {
